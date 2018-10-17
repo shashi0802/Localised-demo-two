@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <meta charset="utf-8">
+    <title>{{ entry.title }}</title>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../static/stylesheets/style.css">
+        <link rel="stylesheet" type="text/css" href="../static/stylesheets/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/stylesheets/flexslider.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,300,300italic,700,400italic,700italic,900,900italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Bitter:400,400italic,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../static/stylesheets/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/stylesheets/main.css">
+        <link rel="stylesheet" type="text/css" href="../static/stylesheets/red-theme.css">
+        <link rel="stylesheet" type="text/css" href="../static/stylesheets/venobox.css">
+
+        
+        <script src="../static/javascripts/jquery-1.10.2.min.js"></script>
+        <script src="../static/javascripts/jquery.flexslider-min.js"></script>
+        <script src="../static/javascripts/bootstrap.min.js"></script>
+        <script src="../static/javascripts/jquery.flexverticalcenter.js"></script>
+        <script src="../static/javascripts/jquery.mixitup.min.js"></script>
+        <script src="../static/javascripts/jquery.stellar.min.js"></script>
+        <script src="../static/javascripts/retina-1.1.0.min.js"></script>
+        <script src="../static/javascripts/venobox.min.js"></script>
+        <script src="../static/javascripts/script.js"></script>
+        <script src="../static/javascripts/contact.js"></script>
+        <style type="text/css">
+            #footer-columns-region a,
+            #footer-left-region a {
+                color: #a21c16;
+            }
+
+            #footer-columns-region a:hover,
+            #footer-left-region a:hover {
+                color: #fff;
+            }
+
+            #contacts-block a,
+            #main-content-region a {
+                color: #e9886c;
+            }
+
+            #contacts-block a:hover,
+            #main-content-region a:hover {
+                color:;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        {% include "../partials/header.html" %}
+
+        {% block main_body %}{% endblock %}
+
+        {% include "../partials/footer.html" %}
+
+    </body>
+</html>

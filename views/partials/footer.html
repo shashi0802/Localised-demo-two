@@ -1,0 +1,127 @@
+{# add your footer here
+to access footer data use {{ partials.footer.field_name }} #}
+
+<!-- /footer-columns-region start-->
+
+<div id="footer-columns-region" class="footer-columns region-30 block-30 bg-color-grayDark2 text-color-light" style="background-color: #e9886c">
+    <div class="container">
+        <div class="row">
+
+            <!-- /footer-first-column-region start-->
+            <div id="footer-first-column-region" class="footer-first-column col-xs-12 col-md-4 text-center">
+                <!-- /region start -->
+                <div class="region">
+                    <!-- /footer-address-block start-->
+                    <div id="footer-address-block" class="footer-address block">
+                        <i class="{{partials.footer.address_part[0].font_awesome}} size-32 margin-bottom-20" style="color: #a21c16"></i>
+                        {# <p>Corporate Plaza<br>
+                            San Francisco, CA</p> #}
+                        {{partials.footer.address_part[0].information}}
+                    </div>
+                    <!-- /footer-address-block end-->
+                </div>
+                <!-- /region end-->
+            </div>
+            <!-- /footer-first-column-region end-->
+
+            <!-- /footer-first-column-region start-->
+            <div id="footer-first-column-region" class="footer-first-column col-xs-12 col-md-4 text-center">
+                <!-- /region start -->
+                <div class="region">
+                    <!-- /footer-address-block start-->
+                    <div id="footer-address-block" class="footer-address block">
+                        <i class="{{partials.footer.address_part[1].font_awesome}} size-32 margin-bottom-20" style="color: #a21c16"></i>
+                        <p>
+                            {# <a href="mailto:info@corporate.com">info@corporate.com</a><br>
+                            <a href="mailto:support@corporate.com">support@corporate.com</a> #}
+                            {{partials.footer.address_part[1].information}}
+                        </p>
+                    </div>
+                    <!-- /footer-address-block end-->
+                </div>
+                <!-- /region end-->
+            </div>
+            <!-- /footer-first-column-region end-->
+
+            <!-- /footer-first-column-region start-->
+            <div id="footer-first-column-region" class="footer-first-column col-xs-12 col-md-4 text-center">
+                <!-- /region start -->
+                <div class="region">
+                    <!-- /footer-address-block start-->
+                    <div id="footer-address-block" class="footer-address block">
+                        <i class="{{partials.footer.address_part[2].font_awesome}} size-32 margin-bottom-20" style="color: #a21c16"></i>
+                        <p>{{partials.footer.address_part[2].information}}<br></p>
+                    </div>
+                    <!-- /footer-address-block end-->
+                </div>
+                <!-- /region end-->
+            </div>
+            <!-- /footer-first-column-region end-->
+
+        </div>
+    </div>
+</div>
+<!-- /footer-columns-region end-->
+
+<footer class="region-10 block-10 bg-color-grayDark1 text-color-light">
+    <div class="container">
+        <div class="row">
+            <!-- /footer-left-region start -->
+            <div id="footer-left-region" class="footer-left region-bottom-sm-0 col-xs-12 col-md-6 text-center-sm">
+                <div class="region">
+                    <!-- /copyright-block start-->
+                    <div id="copyright-block" class="block">
+                        <p>
+                            {#Corporate theme was developed by
+                            <a href="#">corporate.com</a> #}
+                            {{partials.footer.copyright}}
+                        </p>
+                    </div>
+                    <!-- /copyright-block end-->
+                </div>
+            </div>
+            <!-- /footer-left-region end-->
+
+            <!-- /footer-right-region start-->
+            <div id="footer-right-region" class="footer-right region-top-sm-0 col-xs-12 col-md-6 text-right text-center-sm">
+                <div class="region">
+                    <!-- /social-networks-footer start-->
+                    <div id="social-networks-footer-block" class="social-networks-footer block">
+                        {% for x in partials.footer.social_media_icon %}
+                            <a href="{{x.font_awesome_link}}">
+                                <i class="{{x.font_awesome_class}}" aria-hidden="true"></i>
+                            </a>
+                        {% endfor %}
+                        {# <a href="#">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa fa-vimeo" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa fa-dribbble" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </a> #}
+
+                    </div>
+                    <!-- /social-networks-footer end-->
+                </div>
+            </div>
+            <!-- /footer-right-region end-->
+
+        </div>
+    </div>
+</footer>

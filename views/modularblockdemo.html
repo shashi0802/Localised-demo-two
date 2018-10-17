@@ -1,0 +1,193 @@
+{% extends "./layout/parent.html" %}
+{% block main_body %}
+		<title>{{ entry.title }}</title>
+
+		{# add your body here using {{ entry.field_name }} #}
+
+		<!-- /main-wrapper start-->
+		<div class="main-wrapper">
+				<div class="overlay"></div>
+
+				<div id="myCarousel" class="carousel slide bannner-slider" data-ride="carousel">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+
+								<div class="item  active ">
+										<!--render title subtitle -->
+
+										<img src="{{entry.slider[0].image.url}}" alt="Chicago">
+										<div class="slider-section" id="slider-caption">
+												{# <h1>Learn a Language Abroad</h1>
+												<h2>Choose from 9 languages in 50 accredited EF International Language Campuses around the world.</h2> #}
+												{{entry.slider[0].description}}
+												<a href="" target="_entry_header.title_subtitle.cta.open_in_new_tab"></a>
+										</div>
+
+										<!--Render video-->
+
+										<!--Render animation-->
+
+								</div>
+
+								<div class="item ">
+										<!--render title subtitle -->
+
+										<!--Render video-->
+
+										<div class="slider-section">
+												<div class="container">
+														{# <iframe width="854" height="480" src="https://www.youtube.com/embed/pCWH5OW9lDo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe> #}
+														{{entry.slider[1].description}}
+												</div>
+										</div>
+
+										<!--Render animation-->
+
+								</div>
+
+								<div class="item ">
+										<!--render title subtitle -->
+
+										<!--Render video-->
+
+										<!--Render animation-->
+
+										<div class="slider-section slider-animation">
+												<div class="container">
+														{# <h1>City facts, stories, tips on exams, career advice and a lot of great travel tips for inspiration. Follow our blog to stay up to date.</h1>
+														<h2>Education First Blog</h2> #}
+														{{entry.slider[2].description}}
+														<a href="" target=""></a>
+												</div>
+										</div>
+
+								</div>
+
+						</div>
+
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+
+						</a>
+						<a class="right carousel-control" href="#myCarousel" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+
+						</a>
+				</div>
+
+				<section class="wrapper">
+
+						<!-- Title subtitle-->
+						<div class="title_sec">
+								<div class="container">
+										<h1>{{entry.select_campus}}</h1>
+										<p>{{entry.detail}}</p>
+								</div>
+						</div>
+
+						<!-- gallery-->
+						<div class="gallery">
+								<div class="container">
+										<ul class="gallery-slider">
+											{%for x in entry.campus%}
+												<li class="item">
+														<img src="{{x.image.url}}">
+														<div class="our-work-1-overlay" style="background-color: #e9886c">
+																{# <p>Click to See More</p> #}
+																{{x.cta}}
+														</div>
+														<p>
+																{{x.title}}
+														</p>
+												</li>
+											{%endfor%}
+										</ul>
+								</div>
+						</div>
+
+						<!--three column-->
+						<div class="three-column">
+								<div class="container">
+										<ul>
+
+												<li>
+														<div class="caption">
+																{# <h3>The 7th edition of the EF EPI is out now</h3>
+																<p>
+																		<p>Choose from 9 languages in 50 accredited EF International Language Campuses around the world.</p>
+																</p> #}
+																{{entry.banner.description}}
+														</div>
+														<img src="{{entry.banner.image.url}}">
+												</li>
+
+										</ul>
+								</div>
+						</div>
+
+						<!-- Quote-->
+						<div class="quote testimonials-1">
+								<div class="container">
+
+										<i class="{{entry.testimonials.font_awesome}} testimonials-1-icon text-color-theme" style="color: #e9886c"></i>
+										<img src="">
+										<h4>{{entry.testimonials.title}}</h4>
+										<span class="person_name">{{entry.testimonials.name}}</span>
+										<span class="qut_name">
+												{{entry.testimonials.post}}
+										</span>
+										<a href="{{entry.testimonials.source.href}}">{{entry.testimonials.source.title}}</a>
+								</div>
+						</div>
+
+						<!--featured image -->
+						<div class="featured_img">
+								<img style="background-color:(url )">
+								<img src="">
+
+						</div>
+
+						<!-- Quote-->
+						<div class="video">
+								<div class="container">
+										<h4>{{entry.tag}}</h4>
+										{# <iframe width="854" height="480" src="https://www.youtube.com/embed/pCWH5OW9lDo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe> #}
+										{{entry.video}}
+								</div>
+						</div>
+
+						<div class="container registerform">
+								<form action="" class="form" name="registration">
+
+										<label for="fname">{{entry.form[0].label}}</label>
+										<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+										<label for="lname">{{entry.form[1].label}}</label>
+										<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+										<label for="lname">{{entry.form[2].label}}</label>
+										<input type="text" id="lname" name="lastname" placeholder="Your company..">
+
+										<label for="lname">{{entry.form[3].label}}</label>
+										<input type="text" id="lname" name="lastname" placeholder="Your phone number..">
+
+										<label for="country">{{entry.form[4].label}}</label>
+										<input type="text" id="lname" name="lastname" placeholder="Your city..">
+
+										<label for="subject">{{entry.form[5].label}}</label>
+										<textarea id="subject" name="subject" placeholder="your address.." style="height:45px"></textarea>
+
+										<input type="submit" value="Submit" class="regiBtn">
+								</form>
+
+								<div class="thankMsg">
+										<span class="close">{{entry.greet.close}}</span>
+										<p>{{entry.greet.thank}}</p>
+								</div>
+						</div>
+
+				</section>
+
+		</div>
+{% endblock %}

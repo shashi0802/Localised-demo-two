@@ -1,0 +1,88 @@
+{# add your header here 
+to access header data use {{ partials.header.field_name }} #}
+<div class="main-wrapper">
+		<div class="overlay"></div>
+
+		<header style="background-color:#3f51b5;">
+				<div class="container">
+						<div class="row">
+								<div id="logo-sec" class="logo col-md-3 text-center-sm">
+										<a href="{{partials.header.main_menu.menu[0].link.href}}">
+												<img src="{{partials.header.logo.url}}" alt="logo" class="img-responsive">
+										</a>
+								</div>
+
+								<div id="menu-region" class="col-md-9">
+										<nav class="navbar main-menu" role="navigation">
+												<!-- Menu button for mobile display -->
+												<div class="navbar-header">
+														<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">MENU</button>
+												</div>
+												<!-- Navigation links -->
+												<div class="navbar-collapse navbar-ex1-collapse collapse" style="height: 0px;">
+
+														<ul class="nav navbar-right navbar-nav">
+
+																<li>
+
+																		<a style="color:#fff" onmouseover="this.style.color='#a21c16'" onmouseout="this.style.color='#fff'" href="{{partials.header.main_menu.menu[0].link.href}}">{{partials.header.main_menu.menu[0].link.title}}</a>
+
+																</li>
+
+																<li>
+
+																		<a style="color:#fff" onmouseover="this.style.color='#a21c16'" onmouseout="this.style.color='#fff'" href="{{partials.header.main_menu.menu[1].link.href}}">{{partials.header.main_menu.menu[1].link.title}}</a>
+
+																</li>
+
+																<li>
+
+																		<a style="color:#fff" onmouseover="this.style.color='#a21c16'" onmouseout="this.style.color='#fff'" href="#" data-toggle="dropdown">{{partials.header.main_menu.menu[2].link.title}}</a>
+
+																		<ul class="dropdown-menu" style="background-color: #3f51b5">
+
+																				<li>
+																						<a style="color:#fff;" onmouseover="this.style.color='#a21c16'; backgroundColor='#3f51b5' " onmouseout="this.style.color='#fff'" href="{{partials.header.main_menu.menu[2].sub_menu[0].link.href}}">{{partials.header.main_menu.menu[2].sub_menu[0].link.title}}</a>
+																				</li>
+
+																				<li>
+																						<a style="color:#fff;" onmouseover="this.style.color='#a21c16'; backgroundColor='#3f51b5' " onmouseout="this.style.color='#fff'" href="{{partials.header.main_menu.menu[2].sub_menu[1].link.href}}">{{partials.header.main_menu.menu[2].sub_menu[1].link.title}}</a>
+																				</li>
+
+																		</ul>
+
+																</li>
+
+																<li>
+
+																		<a style="color:#fff" onmouseover="this.style.color='#a21c16'" onmouseout="this.style.color='#fff'" href="{{partials.header.main_menu.menu[3].link.href}}">{{partials.header.main_menu.menu[3].link.title}}</a>
+
+																</li>
+
+																<li>
+
+																		<a style="color:#fff" onmouseover="this.style.color='#a21c16'" onmouseout="this.style.color='#fff'" href="{{partials.header.main_menu.menu[4].link.href}}">{{partials.header.main_menu.menu[4].link.title}}</a>
+
+																</li>
+
+														</ul>
+														<div class="lang-dropdown">
+																<select id="language">
+																		<option value="/">{{partials.header.main_menu.language.language_name[0]}}</option>
+																		<option value="/es/">{{partials.header.main_menu.language.language_name[1]}}</option>
+																		<option value="/zh/">{{partials.header.main_menu.language.language_name[2]}}</option>
+																</select>
+														</div>
+												</div>
+												<!-- /navbar-collapse -->
+										</nav>
+
+										<!-- /menu-region -->
+
+								</div>
+								<!-- /row -->
+						</div>
+				</div>
+				<!-- container -->
+		</header>
+</div>
