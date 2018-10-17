@@ -29,7 +29,4 @@ router.get('/:code?', function (req, res) {
             next(error)
         })
 })
-
-
-
 module.exports = router
