@@ -3,7 +3,7 @@ var router = express.Router()
 var Stack = require('../models/contentstack')
 var config = require('config')
 
-console.log("-------------------",config.languages);
+// console.log("-------------------",config.languages);
 
 router.get('/:code?', function (req, res) {
     // console.log("asdfafgsdgdsfhfg",req);
@@ -15,7 +15,7 @@ router.get('/:code?', function (req, res) {
     }else if(req.params.code == "es"){
         languageCode = "es-ar"
     }
-    console.log( req.params.code,languageCode,"landsdfdfg");
+    // console.log( req.params.code,languageCode,"landsdfdfg");
     Stack.ContentType(contentTypeUID).Query()
         .language(languageCode)
         .toJSON()
